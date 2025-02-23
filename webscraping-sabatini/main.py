@@ -27,7 +27,6 @@ def main():
         page_content.add_page_content()
         page.go_back()
         page.update_homepage_context()
-        if(page.material_list_current_index == 5): break
 
     dataframe = clean_dataframe_data(page_content.get_page_dataframe())
     dataframe.to_excel("./data/dataframe.xlsx")
