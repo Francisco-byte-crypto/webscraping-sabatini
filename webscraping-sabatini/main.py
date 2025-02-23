@@ -31,5 +31,6 @@ def main():
 
     dataframe = clean_dataframe_data(page_content.get_page_dataframe())
     dataframe.to_excel("./data/dataframe.xlsx")
+    driver.quit()
 
 main()

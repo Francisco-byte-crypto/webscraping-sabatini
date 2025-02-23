@@ -32,10 +32,12 @@ class Page_Context:
         A_TAG.click()
 
     def is_show_more_clicked(self):
+        #EC.invisibility_of_element_located returns true in case it's invisible.
         show_more_invisible = EC.invisibility_of_element_located((By.LINK_TEXT, 'VER MÁS'))(self.driver)
         if(show_more_invisible):
             self.show_more_clicked = True 
             return self.show_more_clicked
+        
         else:
             self.show_more_clicked = False
             return self.show_more_clicked
